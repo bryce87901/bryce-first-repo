@@ -64,6 +64,18 @@ body.dark button {
 <li>Forza Horizon</li>
 <li>Cooking</li>
 </ul>
+<button id="randomBtn">Surprise me</button>
+<p id="randomInterest"></p>
+<script>
+    const interests = ['Sim racing', 'Forza Horizon', 'Cooking']
+    const randomBtn = document.getElementById('randomBtn')
+    const display = document.getElementById('randomInterest');
+
+    randomBtn.addEventListener('click', () => {
+        const randomIndex = Math.floor(Math.random() * interests.length);
+        display.textContent = interests[randomIndex];
+    });
+</script>
 <button id="darkmodeBtn">Toggle Dark Mode</button>
 <script>
     const darkmodeBtn = document.getElementById('darkmodeBtn');
